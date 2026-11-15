@@ -1,0 +1,29 @@
+# --- Python ---
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- Data: large files never go to git ---
+# Keep the folder structure (.gitkeep), ignore the contents.
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.tif
+*.tiff
+*.nc
+*.grib
+*.zip
+
+# --- Secrets & credentials (Earth Engine, API keys) ---
+.env
+*.env
+*credentials*
+*service-account*.json
+
+# --- OS / editor ---
+.DS_Store
+.vscode/
+.idea/
