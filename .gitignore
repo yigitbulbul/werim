@@ -27,3 +27,6 @@ data/processed/*
 .DS_Store
 .vscode/
 .idea/
+
+# --- Private project instructions (contain personal info) ---
+CLAUDE.md
