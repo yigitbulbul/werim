@@ -20,3 +20,4 @@ Jüri "bunu sen mi yaptın" diye sorarsa: Claude'un katkıları burada, Yiğit'i
 - `src/check_ee.py`: kodu Yiğit yazdı. Claude planı ve ipuçlarını verdi, `ee.Initialize(project=...)` satırını hazır verdi, satır 3–4'teki eksik değişken atamasını açıkladı; çift nokta hatasını Yiğit kendisi buldu.
 - Commit öncesi gizli bilgi kontrolünü yaptı. Commit ve push'u Yiğit VS Code'dan yaptı (2cef5e9).
 - Bu günün LOG.md girişini taslak olarak yazdı.
+- docs/PLAN.md programını yazdı (Yiğit'in onayıyla). Kuraklık yılı grafiği hedefi Yiğit'le birlikte seçildi. SOURCES.md'ye TÜİK indirme yolunu ekledi.
