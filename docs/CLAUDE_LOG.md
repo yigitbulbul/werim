@@ -21,3 +21,8 @@ Jüri "bunu sen mi yaptın" diye sorarsa: Claude'un katkıları burada, Yiğit'i
 - Commit öncesi gizli bilgi kontrolünü yaptı. Commit ve push'u Yiğit VS Code'dan yaptı (2cef5e9).
 - Bu günün LOG.md girişini taslak olarak yazdı.
 - docs/PLAN.md programını yazdı (Yiğit'in onayıyla). Kuraklık yılı grafiği hedefi Yiğit'le birlikte seçildi. SOURCES.md'ye TÜİK indirme yolunu ekledi.
+
+## 2026-11-20
+- `clean_tuik.py`: kodu Yiğit yazdı; Claude `read_excel` satırını ve inceleme için `iloc`/`dropna` satırlarını örnek olarak verdi.
+- Terminal çıktısı okunaksız olunca dosya yapısını Claude çalıştırıp özetledi (4 blok, 27 ilçe). Eksik ilçeyi (Demirköy) Yiğit ipucuyla aradı; nedeni hakkındaki açıklama Claude'un doğrulanmamış tahmini.
+- Okuldaki TÜBİTAK proje hocasına cevap mesajlarını Yiğit'in üslubuyla taslak olarak yazdı.

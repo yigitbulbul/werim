@@ -6,3 +6,4 @@ earthengine-api
 jupyter
 # Pinned: cryptography 49+ ships no wheels for Intel Macs (would need Rust to build)
 cryptography<49
+python-calamine

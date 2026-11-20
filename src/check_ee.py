@@ -1,4 +1,5 @@
 import ee
+
 ee.Initialize(project="werim-514813")
 point = ee.Geometry.Point([27.51, 40.98])
 collection = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
