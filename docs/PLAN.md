@@ -16,7 +16,7 @@ Hedef sonuç ("vay" grafiği, karar 2026-11-18): Kurak bir yılda ilçe ortalama
 ## Okul dönemi 1 (23 Kasım – 6 Aralık): Tek tablo
 - 23–29 Kasım: Kırklareli NDVI (8 ilçe); ERA5-Land Nisan–Temmuz yağış ve sıcaklık.
 - 30 Kasım – 6 Aralık: `data/processed/dataset.csv` (ilçe-yıl satırları). Edirne ayrı işaretli. Kurak yıl adaylarını veriden belirle.
-- 6 Aralık civarı: danışman öğretmenle 10 dakikalık ara kontrol.
+- 6 Aralık civarı: ARBİS kaydının tamamlandığını kontrol et.
 
 ## Okul dönemi 2 (7–20 Aralık): Model
 - 7–13 Aralık: Baseline'lar (önceki yıl, ilçe ortalaması). Doğrusal regresyon, leave-one-year-out, MAE ve MAPE.
@@ -27,9 +27,16 @@ Hedef sonuç ("vay" grafiği, karar 2026-11-18): Kurak bir yılda ilçe ortalama
 
 ## Rapor (21 Aralık – 2 Ocak)
 - 21–27 Aralık: Türkçe rapor taslağı (TÜBİTAK formatı)
-- 28–31 Aralık: Danışman kontrolü ve düzeltmeler
+- 28–31 Aralık: TÜBİTAK proje hocasının kontrolü ve düzeltmeler
 - 2 Ocak: Gönderim
 - 3–4 Ocak: Tampon
+
+## TÜBİTAK proje hocasından ricalar (yurt dışı danışmanının önerisi, 2026-11-18)
+- [ ] ARBİS kaydını açsın ya da güncellesin (başvuruda danışman bilgilerini Yiğit girecek). Hedef: Kasım bitmeden.
+- [ ] Göndermeden önce raporu TÜBİTAK kuralları ve formatı açısından okusun (28–31 Aralık).
+- [ ] Bölge sergisine çağrılırsak okul işlemlerinde ve sergide destek.
+- Kategori ve rapor kuralları: TÜBİTAK 2204-A çağrı metninden Yiğit ve Claude birlikte okuyacak.
+- Hocanın kişisel bilgileri (ARBİS, kimlik vb.) repoya ve sohbete girmez.
 
 ## Açık noktalar
 - Yiğit'in Aralık sınav haftası? Öğrenince yük kaydırılacak.
