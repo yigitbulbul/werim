@@ -25,4 +25,11 @@ tuik = sown.merge(harvested, on=keys)
 tuik = tuik.merge(yields, on=keys)
 tuik = tuik.merge(production, on=keys)
 print(tuik.head())
-print(tuik.shape)   
+print(tuik.shape)
+num_cols = ["sown_area_da", "harvested_area_da", "yield_kg_da", "production_t"]
+tuik[num_cols] = tuik[num_cols].astype(float)
+check = tuik["production_t"] * 1000 / tuik["harvested_area_da"]
+diff = (check - tuik["yield_kg_da"]).abs()
+print(diff.max())
+cols = ["province", "district", "code", "year"] + num_cols
+tuik[cols].to_csv("data/processed/tuik_yield.csv", index=False)
