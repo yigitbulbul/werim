@@ -15,6 +15,14 @@ def read_block(start_row, value_name):
     long["district"] = parts[1]
     long["code"] = parts[2]
     return long
-test = read_block(4, "sown_area_da")
-print(test.head())
-print(test.shape)     
+sown = read_block(4, "sown_area_da")
+harvested = read_block(13, "harvested_area_da")
+yields = read_block(22, "yield_kg_da")
+production = read_block(31, "production_t")
+
+keys = ["province", "district", "code", "year"]
+tuik = sown.merge(harvested, on=keys)
+tuik = tuik.merge(yields, on=keys)
+tuik = tuik.merge(production, on=keys)
+print(tuik.head())
+print(tuik.shape)   
