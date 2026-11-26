@@ -13,5 +13,9 @@ yield_block.index = years          # name the rows with years
 long = yield_block.reset_index().melt(id_vars="index", var_name="district", value_name="yield_kg_da")
 long = long.rename(columns={"index": "year"})   # rename a column: {"old": "new"}
 long["year"] = long["year"].astype(int)          # convert to whole numbers
+parts = long["district"].str.extract(r"(.+)\((.+)\)-(\d+)")
+long["province"] = parts[0]
+long["district"] = parts[1]
+long["code"] = parts[2]
 print(long.head())
 print(long.shape)   
