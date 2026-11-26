@@ -26,3 +26,7 @@ Jüri "bunu sen mi yaptın" diye sorarsa: Claude'un katkıları burada, Yiğit'i
 - `clean_tuik.py`: kodu Yiğit yazdı; Claude `read_excel` satırını ve inceleme için `iloc`/`dropna` satırlarını örnek olarak verdi.
 - Terminal çıktısı okunaksız olunca dosya yapısını Claude çalıştırıp özetledi (4 blok, 27 ilçe). Eksik ilçeyi (Demirköy) Yiğit ipucuyla aradı; nedeni hakkındaki açıklama Claude'un doğrulanmamış tahmini.
 - Okuldaki TÜBİTAK proje hocasına cevap mesajlarını Yiğit'in üslubuyla taslak olarak yazdı.
+
+## 2026-11-26
+- `clean_tuik.py`: kodu Yiğit yazdı. Claude `melt`, `rename`/`astype`, regex deseni `(.+)\((.+)\)-(\d+)`, `merge` ve sağlama formülü için örnek satırlar verdi; fonksiyona dönüştürmeyi adım adım anlattı. Sıralama hatalarını ve parametresiz fonksiyon hatasını Yiğit ipucuyla düzeltti.
+- Claude, TÜİK verisinin tutarlılığını ayrıca kontrol etti (en büyük fark < 0.5 kg/da, harvested > sown satırı yok).

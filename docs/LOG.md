@@ -1,5 +1,11 @@
 # Günlük ilerleme
 
+## 2026-11-26
+- `src/clean_tuik.py` tamamlandı (Yiğit yazdı): 4 blok `read_block(start_row, value_name)` fonksiyonuyla okunuyor, `melt` ile uzun formata çevriliyor, ilçe adı regex ile il/ilçe/kod olarak ayrılıyor, 4 tablo `merge` ile birleşiyor.
+- Çıktı: `data/processed/tuik_yield.csv`, 243 satır (27 ilçe × 9 yıl), 8 sütun. Git'te yok; kod tekrar çalıştırılarak üretilir.
+- Sağlama: verim = üretim × 1000 / hasat alanı. En büyük fark 0.49997 kg/da (TÜİK'in tam sayıya yuvarlaması). Yiğit farkın 0.5'in altında kalacağını doğru tahmin etti.
+- Öğrenilen: Python kodu yukarıdan aşağıya çalışır (NameError iki kez); `yield` ayrılmış kelime; geçen test her zaman doğru kod demek değil (parametreleri kullanmayan fonksiyon testi geçiyordu).
+
 ## 2026-11-20
 - 19 Kasım çalışılamadı (baş ağrısı); program iki gün geride.
 - `python-calamine` requirements.txt'e eklendi ve kuruldu (önce dosya kaydedilmediği için kurulmamıştı).

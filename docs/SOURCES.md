@@ -6,7 +6,7 @@ Her kaynak için: ne, nereden (link), ne zaman indirildi, lisans.
 - TÜİK bitkisel üretim istatistikleri, ilçe bazında: https://biruni.tuik.gov.tr/medas/
   - İndirildi 2026-11-18 (Yiğit). Dosya: `data/raw/tuik_aycicegi_ilce.xls` (git'te yok).
   - Seçim yolu: Konu "Bitkisel Üretim İstatistikleri" → Ölçüm "Tahıllar ve diğer bitkisel ürünler" → Ürün "[01.11.95.00.01] Ayçiçeği Tohumu (Yağlık)" → Ürün niteliği ve ölçü birimi: hepsi (ekilen alan, hasat edilen alan, verim, üretim miktarı) → Zaman 2017–2025 → Düzey: ilçe, Tekirdağ + Kırklareli + Edirne (28 ilçe; Ergene ve Kapaklı ayrı).
-  - İçerik (2026-11-20): 4 blok alt alta (ekilen alan da, hasat edilen alan da, verim kg/da, üretim ton), her biri 2017–2025. 28 değil 27 ilçe sütunu var: Kırklareli Demirköy yok. Neden (ekim olmaması?) doğrulanmadı; TÜİK'te tek başına kontrol edilecek.
+  - İçerik (2026-11-20): 4 blok alt alta (ekilen alan da, hasat edilen alan da, verim kg/da, üretim ton), her biri 2017–2025. 28 değil 27 ilçe sütunu var: Kırklareli Demirköy yok. Neden (ekim olmaması?) doğrulanmadı; TÜİK'te tek başına kontrol edilecek. Temizlenmiş hali: `data/processed/tuik_yield.csv` (`src/clean_tuik.py`), iç tutarlılık kontrolü yapıldı (2026-11-26).
 - Sentinel-2 L2A (Google Earth Engine): COPERNICUS/S2_SR_HARMONIZED
 - ERA5-Land (Google Earth Engine): ECMWF/ERA5_LAND/DAILY_AGGR
 - ESA WorldCover (Google Earth Engine): ESA/WorldCover/v200
