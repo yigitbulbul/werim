@@ -9,7 +9,11 @@
 - İlçe sınırı kaynağı seçildi: geoBoundaries v6 (GAUL 2015'te Ergene, Kapaklı, Süleymanpaşa yok). Bkz. DECISIONS.md.
 - `src/check_boundaries.py` (Yiğit): Trakya dikdörtgenindeki ilçeler 39 çıktı; 11'i başka illerden (İstanbul, Çanakkale, Balıkesir, Bursa). Dikdörtgen yetmez, ilçeler açıkça seçilmeli.
 - geoBoundaries'te ş, ı, ğ, İ, Ş harfleri `?` olmuş (ç, ö, ü sağlam; muhtemelen Latin-1 kodlaması, doğrulanmadı). `src/match_districts.py` (Yiğit): `to_gb_name()` TÜİK adını bu bozuk biçime çeviriyor; 3 örnekte doğru.
-- YARIM: 27 ilçenin hepsini çevirip Earth Engine listesiyle karşılaştırmak ve `data/district_mapping.csv` olarak kaydetmek. Hedef: bulunamayan 0.
+- Akşam: 27 ilçenin 27'si geoBoundaries'te bulundu (bulunamayan 0), `data/district_mapping.csv` kodla üretildi ve repoya eklendi.
+- İlk NDVI (`src/ndvi_one.py`, Yiğit): Çorlu, Temmuz 2023, 7 Sentinel-2 görüntüsü (tek kare 35TNF, 5 günde bir). Bulut maskesi (SCL 3, 8, 9, 10) ve medyan sonrası NDVI: tüm ilçe 0.315, WorldCover tarım alanı 0.289, orman 0.663. Maske ortalamayı düşürdü çünkü Temmuz'da yeşil olan orman/çayır çıktı, geriye büyük kısmı hasat edilmiş tarım alanı kaldı (orman testiyle doğrulandı).
+- 2017–2018 L2A kontrolü (Çorlu, Temmuz): 2017'de 3, 2018'de 6, 2023'te 7 görüntü. Veri var ama 2017 seyrek; her ilçe-yıl için görüntü sayısı kaydedilecek, 2017 için L1C ya da 8 yıl seçeneği veriye göre kararlaştırılacak.
+- Gözlem: tarım alanı ortalama NDVI'ı hem ayçiçeği payını hem sağlığını taşıyor; ileride yeşil piksel eşiği ve TÜİK ekim alanıyla karşılaştırma denenecek.
+- Rapor taslağı son tarihi 20 Aralık (TÜBİTAK proje hocası, Turnitin). Bkz. PLAN.md.
 
 ## 2026-11-20
 - 19 Kasım çalışılamadı (baş ağrısı); program iki gün geride.

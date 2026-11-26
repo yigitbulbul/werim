@@ -33,3 +33,6 @@ Jüri "bunu sen mi yaptın" diye sorarsa: Claude'un katkıları burada, Yiğit'i
 - İlçe sınırı kaynaklarını Earth Engine'de sorgulayarak karşılaştırdı (GAUL 2015 ve geoBoundaries); `?` karakterinin gerçek soru işareti olduğunu ve Türkiye'de iki "Saray" olduğunu kontrol etti.
 - `check_boundaries.py` ve `match_districts.py`: kodu Yiğit yazdı; Claude iskelet ve ipuçları verdi, `to_gb_name` içindeki iki düzeltme satırını (merkez eki, 5 harfin `?` olması) hazır verdi.
 - Yiğit'in isteğiyle WPILib VS Code ayarlarında Auto Save'i açtı (repo dışı).
+- `match_districts.py` karşılaştırma ve kaydetme kısmı: Yiğit yazdı, Claude `iterrows`, `isin`, `~` örneklerini verdi.
+- `ndvi_one.py`: ilk sürümü Yiğit Claude'un verdiği parçalarla yazdı (bulut maskesi, NDVI, medyan, WorldCover maskesi, orman testi). Fonksiyona dönüştürme (`july_ndvi`) Yiğit'in isteğiyle Claude tarafından yapıldı: Yiğit'in satırları yeniden sıralandı ve parametreleştirildi, yeni mantık eklenmedi; Yiğit kapsam sorusunu doğru cevapladı.
+- Görüntü sayılarını (karo 35TNF, tarihler, 2017–2019) Claude ayrıca sorguladı. PLAN.md'yi 20 Aralık rapor tarihine göre Claude güncelledi (Yiğit onayıyla). GençBizzTech sitesini okuyup özetledi, IDEAS.md'ye not düştü.
