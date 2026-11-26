@@ -13,6 +13,8 @@ def mask_clouds(img):
 def add_ndvi(img):
     return img.normalizedDifference(["B8", "B4"]).rename("NDVI")
 ndvi = images.map(mask_clouds).map(add_ndvi).median()
-mean = ndvi.reduceRegion(reducer=ee.Reducer.mean(), geometry=corlu, scale=10, maxPixels=1e9)
+cropland = ee.ImageCollection("ESA/WorldCover/v200").first().select("Map").eq(40)
+ndvi_crop = ndvi.updateMask(cropland)
+mean = ndvi_crop.reduceRegion(reducer=ee.Reducer.mean(), geometry=corlu, scale=10, maxPixels=1e9)
 print(mean.getInfo())
 print(images.size().getInfo())
