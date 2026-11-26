@@ -18,25 +18,39 @@ Hedef sonuç ("vay" grafiği, karar 2026-11-18): Kurak bir yılda ilçe ortalama
 - 30 Kasım – 6 Aralık: `data/processed/dataset.csv` (ilçe-yıl satırları). Edirne ayrı işaretli. Kurak yıl adaylarını veriden belirle.
 - 6 Aralık civarı: ARBİS kaydının tamamlandığını kontrol et.
 
-## Okul dönemi 2 (7–20 Aralık): Model
-- 7–13 Aralık: Baseline'lar (önceki yıl, ilçe ortalaması). Doğrusal regresyon, leave-one-year-out, MAE ve MAPE.
-- 14–20 Aralık: Gerekirse random forest. 3 grafik:
-  1. Tahmin ve gerçek verim
-  2. Yıl yıl hata: model ve iki baseline
-  3. Kuraklık yılı: o yıl için ilçe ortalaması tahmini, Werim tahmini ve gerçek verim ("vay" grafiği)
+## Okul dönemi 2 (7–20 Aralık): Model ve rapor birlikte
+Değişiklik (2026-11-26): TÜBİTAK proje hocası raporu Turnitin'den geçirmek için en geç **20 Aralık**'ta istiyor. Rapor artık modelle paralel yazılıyor. Raporu Yiğit yazar, Claude geri bildirim verir (Turnitin yapay zekâ metnini de işaretleyebilir).
+- 7–13 Aralık:
+  - Model: baseline'lar (önceki yıl, ilçe ortalaması), doğrusal regresyon, leave-one-year-out, MAE ve MAPE.
+  - Rapor: Giriş, Veri ve Yöntem bölümleri (sonuca bağlı değil).
+- 14–19 Aralık:
+  - 3 grafik:
+    1. Tahmin ve gerçek verim
+    2. Yıl yıl hata: model ve iki baseline
+    3. Kuraklık yılı: ilçe ortalaması tahmini, Werim tahmini ve gerçek verim ("vay" grafiği)
+  - Rapor: Sonuçlar, Tartışma, Sınırlılıklar.
+  - Random forest yalnızca zaman kalırsa.
+- **20 Aralık: Tam taslak hocada.**
 
-## Rapor (21 Aralık – 2 Ocak)
-- 21–27 Aralık: Türkçe rapor taslağı (TÜBİTAK formatı)
-- 28–31 Aralık: TÜBİTAK proje hocasının kontrolü ve düzeltmeler
+## Rapor sonrası (21 Aralık – 2 Ocak)
+- 21–27 Aralık: Hocanın okuması ve Turnitin kontrolü. Bu sırada küçük düzeltmeler.
+- 28 Aralık – 1 Ocak: Hocanın notlarına göre düzeltmeler.
 - 2 Ocak: Gönderim
 - 3–4 Ocak: Tampon
 
+## Sıkışırsa kesilecekler (sırayla)
+1. Sentinel-1 radar doğrulaması (zaten ek iş)
+2. Random forest
+3. Edirne (Tekirdağ + Kırklareli yeterli)
+
 ## TÜBİTAK proje hocasından ricalar (yurt dışı danışmanının önerisi, 2026-11-18)
 - [ ] ARBİS kaydını açsın ya da güncellesin (başvuruda danışman bilgilerini Yiğit girecek). Hedef: Kasım bitmeden.
-- [ ] Göndermeden önce raporu TÜBİTAK kuralları ve formatı açısından okusun (28–31 Aralık).
+- [ ] Göndermeden önce raporu TÜBİTAK kuralları ve formatı açısından okusun ve Turnitin'den geçirsin. Taslak en geç 20 Aralık'ta hocada.
 - [ ] Bölge sergisine çağrılırsak okul işlemlerinde ve sergide destek.
 - Kategori ve rapor kuralları: TÜBİTAK 2204-A çağrı metninden Yiğit ve Claude birlikte okuyacak.
 - Hocanın kişisel bilgileri (ARBİS, kimlik vb.) repoya ve sohbete girmez.
 
 ## Açık noktalar
 - Yiğit'in Aralık sınav haftası? Öğrenince yük kaydırılacak.
+- Araştırma sorusu "Haziran sonu itibarıyla" diyor, yöntem Temmuz NDVI'ını kullanıyor. Çelişki modelden önce çözülecek.
+- Ek iş adayı: Sentinel-1 ile ayçiçeği doğrulaması (Qadir vd.), tek ilçe-tek yıl. Ana doğrulama: Temmuz yeşil tarım alanı ile TÜİK ekim alanı karşılaştırması (NDVI'dan hemen sonra).
