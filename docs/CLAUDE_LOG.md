@@ -30,3 +30,6 @@ Jüri "bunu sen mi yaptın" diye sorarsa: Claude'un katkıları burada, Yiğit'i
 ## 2026-11-26
 - `clean_tuik.py`: kodu Yiğit yazdı. Claude `melt`, `rename`/`astype`, regex deseni `(.+)\((.+)\)-(\d+)`, `merge` ve sağlama formülü için örnek satırlar verdi; fonksiyona dönüştürmeyi adım adım anlattı. Sıralama hatalarını ve parametresiz fonksiyon hatasını Yiğit ipucuyla düzeltti.
 - Claude, TÜİK verisinin tutarlılığını ayrıca kontrol etti (en büyük fark < 0.5 kg/da, harvested > sown satırı yok).
+- İlçe sınırı kaynaklarını Earth Engine'de sorgulayarak karşılaştırdı (GAUL 2015 ve geoBoundaries); `?` karakterinin gerçek soru işareti olduğunu ve Türkiye'de iki "Saray" olduğunu kontrol etti.
+- `check_boundaries.py` ve `match_districts.py`: kodu Yiğit yazdı; Claude iskelet ve ipuçları verdi, `to_gb_name` içindeki iki düzeltme satırını (merkez eki, 5 harfin `?` olması) hazır verdi.
+- Yiğit'in isteğiyle WPILib VS Code ayarlarında Auto Save'i açtı (repo dışı).

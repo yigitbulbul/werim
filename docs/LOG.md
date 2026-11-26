@@ -6,6 +6,11 @@
 - Sağlama: verim = üretim × 1000 / hasat alanı. En büyük fark 0.49997 kg/da (TÜİK'in tam sayıya yuvarlaması). Yiğit farkın 0.5'in altında kalacağını doğru tahmin etti.
 - Öğrenilen: Python kodu yukarıdan aşağıya çalışır (NameError iki kez); `yield` ayrılmış kelime; geçen test her zaman doğru kod demek değil (parametreleri kullanmayan fonksiyon testi geçiyordu).
 
+- İlçe sınırı kaynağı seçildi: geoBoundaries v6 (GAUL 2015'te Ergene, Kapaklı, Süleymanpaşa yok). Bkz. DECISIONS.md.
+- `src/check_boundaries.py` (Yiğit): Trakya dikdörtgenindeki ilçeler 39 çıktı; 11'i başka illerden (İstanbul, Çanakkale, Balıkesir, Bursa). Dikdörtgen yetmez, ilçeler açıkça seçilmeli.
+- geoBoundaries'te ş, ı, ğ, İ, Ş harfleri `?` olmuş (ç, ö, ü sağlam; muhtemelen Latin-1 kodlaması, doğrulanmadı). `src/match_districts.py` (Yiğit): `to_gb_name()` TÜİK adını bu bozuk biçime çeviriyor; 3 örnekte doğru.
+- YARIM: 27 ilçenin hepsini çevirip Earth Engine listesiyle karşılaştırmak ve `data/district_mapping.csv` olarak kaydetmek. Hedef: bulunamayan 0.
+
 ## 2026-11-20
 - 19 Kasım çalışılamadı (baş ağrısı); program iki gün geride.
 - `python-calamine` requirements.txt'e eklendi ve kuruldu (önce dosya kaydedilmediği için kurulmamıştı).
